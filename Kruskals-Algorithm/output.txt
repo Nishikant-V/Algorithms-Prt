@@ -1,0 +1,5 @@
+Edges in MST:
+2 - 3 = 4
+0 - 3 = 5
+0 - 1 = 10
+Minimum cost = 19
