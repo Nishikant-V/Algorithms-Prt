@@ -25,11 +25,12 @@ int main()
 
     for (int i = 0; i < V - 1; i++)
     {
-        int min = INT_MAX, u;
+        int min = INT_MAX;
+        int u;
 
         for (int j = 0; j < V; j++)
         {
-            if (!mst[j] && key[j] < min)
+            if (mst[j] == 0 && key[j] < min)
             {
                 min = key[j];
                 u = j;
@@ -40,7 +41,7 @@ int main()
 
         for (int v = 0; v < V; v++)
         {
-            if (g[u][v] && !mst[v] && g[u][v] < key[v])
+            if (g[u][v] != 0 && mst[v] == 0 && g[u][v] < key[v])
             {
                 parent[v] = u;
                 key[v] = g[u][v];
